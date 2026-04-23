@@ -3,98 +3,78 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>一门清廉双进士 - 钱楷廉洁宣传</title>
+<title>清廉文化人物总集</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:"微软雅黑","宋体",serif;}
-
-/* 👇 这里就是背景图设置，直接用你的 背景.jpg */
 body{
-    background: url("jing.jpg") no-repeat center center fixed;
+    background: url("https://p6-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/5a8ac36a4d824347a7b666fd29d47d8f.jpg") no-repeat center center fixed;
     background-size: cover;
     color:#fff;
     line-height:1.8;
 }
-.container{max-width:750px;margin:0 auto;padding:20px;}
-.header{text-align:center;padding:30px 0;border-bottom:2px solid #d4af37;margin-bottom:25px;}
-.title{font-size:32px;color:#d4af37;font-weight:bold;margin-bottom:10px;}
-.subtitle{font-size:18px;color:#eee;}
-.card{
-    background:rgba(0,0,0,0.6); /* 半透明黑底，保证文字清晰 */
-    border:1px solid rgba(212,175,55,0.5);
+.container{max-width:900px;margin:0 auto;padding:20px;}
+.header{text-align:center;padding:40px 0;margin-bottom:30px;}
+.title{font-size:36px;color:#d4af37;font-weight:bold;margin-bottom:10px;text-shadow:0 0 10px #000;}
+.subtitle{font-size:18px;color:#eee;text-shadow:0 0 5px #000;}
+
+/* 人物卡片列表 */
+.person-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap:25px;
+    margin-top:20px;
+}
+.person-card{
+    background:rgba(0,0,0,0.7);
+    border:2px solid rgba(212,175,55,0.3);
     border-radius:12px;
-    padding:25px;
-    margin-bottom:25px;
-    backdrop-filter:blur(8px);
+    overflow:hidden;
+    text-align:center;
+    transition:0.3s;
+    cursor:pointer;
 }
-.card-title{font-size:22px;color:#d4af37;margin-bottom:15px;padding-bottom:10px;border-bottom:1px solid rgba(212,175,55,0.2);}
-.card-content{font-size:16px;color:#f0f0f0;text-align:justify;}
-.img-box{width:100%;border-radius:8px;overflow:hidden;margin:18px 0;border:2px solid rgba(212,175,55,0.4);}
-.img-box img{width:100%;height:auto;display:block;}
-.quote{
-    background:rgba(212,175,55,0.15);
-    border-left:4px solid #d4af37;
-    padding:18px;
-    margin:20px 0;
-    font-style:italic;
-    font-size:17px;
-    color:#fff;
+.person-card:hover{transform:scale(1.03);border-color:#d4af37;}
+.person-card img{width:100%;height:210px;object-fit:cover;}
+.person-card .name{
+    padding:15px;
+    font-size:18px;
+    color:#d4af37;
+    font-weight:bold;
 }
-.footer{text-align:center;padding:30px 0;margin-top:30px;border-top:2px solid #d4af37;color:#ccc;font-size:14px;}
 </style>
 </head>
+
 <body>
 <div class="container">
     <div class="header">
-        <h1 class="title">一门清廉双进士</h1>
-        <p class="subtitle">明代廉吏·钱楷 廉洁文化宣传</p>
+        <h1 class="title">中华清廉文化人物总集</h1>
+        <p class="subtitle">传承清风正气 · 弘扬廉洁精神</p>
     </div>
 
-    <div class="card">
-        <h2 class="card-title">钱楷简介</h2>
-        <div class="img-box">
-            <img src="hua.jpg" alt="钱楷简介">
-        </div>
-        <div class="card-content">
-            钱楷，字范之，明代贾镇（今冠县贾镇）人，明嘉靖四十四年中进士，为官清正廉洁。
-        </div>
-    </div>
+    <!-- 人物卡片列表 -->
+    <div class="person-list">
+        <!-- 钱楷 -->
+        <a href="qiankai.html" style="text-decoration:none;">
+            <div class="person-card">
+                <img src="https://p6-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/a81bb23addd64f72a1fdb9cfe8ea67d0.jpg" alt="钱楷">
+                <div class="name">明代廉吏 · 钱楷</div>
+            </div>
+        </a>
 
-    <div class="quote">
-        尔俸尔禄民脂民膏，下民易虐上天难欺
-    </div>
+        <!-- 你可以无限加人 -->
+        <a href="person2.html" style="text-decoration:none;">
+            <div class="person-card">
+                <img src="https://p6-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/45e9412acb51423591876fd2219b6ded.jpg" alt="人物2">
+                <div class="name">清廉人物 · 二</div>
+            </div>
+        </a>
 
-    <div class="card">
-        <h2 class="card-title">为官清廉</h2>
-        <div class="img-box">
-            <img src="lian.jpg" alt="清廉为官">
-        </div>
-        <div class="card-content">
-            钱楷天性勤敏，“长于吏事而有文武大略，其才无所不可”。任安邑知县时，刚到任便决断了积压多年的疑案，百姓无不夸赞他神明。他还心系百姓，据《河间志》记载，在河间知府任上，他时常亲自来到河边，卷起裤腿，查看水情，喟然长叹道：“为官的长吏兀自坐于公堂，受民脂民膏奉养，如果不能为百姓效咫尺之劳，减秋毫之苦，如此甘于平庸，怎对得起天地良心？”这与河间府署大堂前的《戒石铭》：“尔俸尔禄民脂民膏，下民易虐上天难欺”，颇有相通之处。河间府自古地处九河下梢，河流众多。然而水景虽好，但遇上游洪水泛滥时，田地庐舍便成了池塘湖泊，百姓苦不堪言。钱楷反复思考后，决定修建古唐河堤防，河堤长达二十多里，不仅彻底解决了危害河间府多年的洪灾，还增加灌溉农田千余顷。至此，辖区内的老百姓安居乐业。
-        </div>
-    </div>
-
-    <div class="card">
-        <h2 class="card-title">坚守原则</h2>
-        <div class="card-content">
-            钱楷为官刚直不阿，不惧权势。据《冠县志》记载，刘伯温的后人诚意伯刘世延因斥责权相张居正“柄国不奔丧”而被送刑部治罪，钱楷在刑部处理此事时，严格按照原则办事，没按张居正的意志办，张居正非常不高兴，对其处处压制，但钱楷不为所动，依然不畏权贵，清正廉洁为官，公平公正办事。他屡次冒犯权贵而遭受压制，但他从不屈服，依然保持自己高尚的节操。在河间知府任上，一下属自恃有强硬的后台，多次通过关系找钱楷，希望得到重用，但钱楷不屈于权势，不予理睬。
-        </div>
-    </div>
-
-    <div class="card">
-        <h2 class="card-title">父子双进士</h2>
-        <div class="img-box">
-            <img src="xun.jpg" alt="父子双进士">
-        </div>
-        <div class="card-content">
-            在钱楷的影响下，长子钱允灿自幼发奋读书，1598年（万历二十六年）考入进士，成为举国少见的父子双进士。钱允灿更是继承了父亲清正廉明，干净干事的优良家风，历任任邱、舒城、武清知县，所到之处均以“循吏”称。
-        </div>
-    </div>
-
-    <div class="footer">
-        <p>传承廉洁家风 · 弘扬清风正气</p>
-        <p>廉洁宣传专题</p>
-        <p>聊城金融监管分局制作</p>
-<p>冠县金融监管支局承办</p>
+        <a href="person3.html" style="text-decoration:none;">
+            <div class="person-card">
+                <img src="https://p6-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/b007c3732c1944e3a419a4560abd95da.jpg" alt="人物3">
+                <div class="name">清廉人物 · 三</div>
+            </div>
+        </a>
     </div>
 </div>
 </body>
